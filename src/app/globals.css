@@ -1,0 +1,188 @@
+@import "tailwindcss";
+@import "@fontsource/inter";
+
+:root {
+  --background: #0e0e1c;
+  --foreground: #ededed;
+  --accent-gradient: linear-gradient(90deg, #a259f7 0%, #4fc3f7 100%);
+  --border-gradient: linear-gradient(90deg, #a259f7 0%, #4fc3f7 100%);
+  --glow: 0 0 24px 4px #a259f7cc;
+  --font-sans: 'InterVariable', Arial, Helvetica, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.button-gradient {
+  background: var(--accent-gradient);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 16px 0 #a259f799;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.button-gradient:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 4px 32px 0 #4fc3f799;
+}
+
+.gradient-border {
+  border-image: var(--border-gradient) 1;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.glow {
+  text-shadow: 0 0 16px #a259f7, 0 0 32px #4fc3f7;
+}
+
+.ai-glow {
+  text-shadow: 0 0 8px #a259f7, 0 0 16px #4fc3f7;
+}
+
+.border-gradient {
+  border-image: linear-gradient(90deg, #a259f7 0%, #4fc3f7 100%) 1;
+}
+
+.swiper,
+.swiper-wrapper {
+  overflow: visible !important;
+}
+
+.swiper-slide-duplicate {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s forwards;
+}
+.animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
+.animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+.animate-fade-in-up.delay-300 { animation-delay: 0.3s; }
+@keyframes fadeInUp {
+  to { opacity: 1; transform: none; }
+}
+
+.button-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 9999px;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  transition: box-shadow 0.2s, border-color 0.2s, color 0.2s;
+}
+.button-secondary:hover {
+  box-shadow: 0 0 16px 2px #a259f7, 0 0 32px 4px #4fc3f7;
+  border-color: #a259f7;
+  color: #a259f7;
+}
+.button-gradient-pulse {
+  animation: pulse-glow 1.5s infinite;
+}
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 16px #a259f7, 0 0 32px #4fc3f7; }
+  50% { box-shadow: 0 0 32px 8px #a259f7, 0 0 48px 16px #4fc3f7; }
+  100% { box-shadow: 0 0 16px #a259f7, 0 0 32px #4fc3f7; }
+}
+.bounce-arrow {
+  animation: bounce 1.2s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
+
+.testimonial-gradient {
+  border-image: linear-gradient(90deg, #a259f7 0%, #4fc3f7 100%) 1;
+  border-width: 2px;
+  border-style: solid;
+}
+.testimonial-glow:hover {
+  box-shadow: 0 0 32px 8px #a259f7cc, 0 0 48px 16px #4fc3f7cc;
+  transition: box-shadow 0.2s;
+}
+.quote-mark {
+  font-size: 2.5rem;
+  color: #a259f7;
+  line-height: 1;
+  font-weight: bold;
+  margin-bottom: -0.5rem;
+}
+.swiper-button-next, .swiper-button-prev {
+  color: #ededed;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .swiper-button-next, .swiper-button-prev {
+    display: none;
+  }
+}
+.cta-gradient {
+  background: linear-gradient(90deg, #a259f7 0%, #4fc3f7 100%);
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  box-shadow: 0 2px 16px 0 #a259f799;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.cta-gradient:hover {
+  box-shadow: 0 4px 32px 0 #4fc3f799;
+  transform: translateY(-3px) scale(1.03);
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, #20103a 0%, #181830 100%);
+}
+.testimonial-glow {
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.testimonial-glow:hover {
+  box-shadow: 0 0 48px 12px #a259f7cc, 0 0 64px 24px #4fc3f7cc;
+  transform: scale(1.05);
+}
+.star {
+  color: #ffd600;
+  font-size: 1.25rem;
+  margin-right: 2px;
+}
+@media (max-width: 640px) {
+  .cta-gradient {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "hero": {
+    "title": "I automate your business routine in 2 days.",
+    "subtitle": "No long development or hiring teams.",
+    "description": "AI + n8n integrations that save hundreds of hours and make money 24/7.",
+    "button": {
+      "get": "Get automation",
+      "examples": "Work examples"
+    },
+    "stats": "1200+ hours saved for clients in a year."
+  },
+  "menu": {
+    "cases": "Work examples",
+    "pricing": "Packages & Pricing",
+    "testimonials": "Testimonials",
+    "bonus": "Bonus",
+    "contacts": "Contacts"
+  },
+  "how": {
+    "title": "How I work",
+    "step1": {
+      "title": "Task analysis",
+      "desc": "I identify the main routine and growth point in your business."
+    },
+    "step2": {
+      "title": "Integration setup + AI",
+      "desc": "I create scenarios that save hours of work without programmers."
+    },
+    "step3": {
+      "title": "Support & growth",
+      "desc": "I provide instructions, train your team, and help scale solutions."
+    }
+  },
+  "pricing": {
+    "title": "Packages & Pricing",
+    "fast": {
+      "name": "Fast setup",
+      "desc": "1 scenario to save time in 1 day",
+      "price": "100$",
+      "features": [
+        "Task analysis — we define routine and growth points",
+        "Setup of 1 n8n scenario for your business",
+        "Video instruction for your team",
+        "7 days of support after launch"
+      ],
+      "bonus": "Bonus: PDF '25 AI Prompts for Business Domination'",
+      "button": "Order and save time",
+      "note": "We'll start within 24 hours after payment"
+    },
+    "ai": {
+      "name": "Automation + AI",
+      "desc": "1-2 scenarios, up to 10 hours saved per week",
+      "price": "250$",
+      "features": [
+        "Task analysis — we define routine and growth points",
+        "Process automation (1-2 integrations + AI)",
+        "AI prompts setup",
+        "Documentation + video",
+        "7 days of support after launch"
+      ],
+      "bonus": "Bonus: PDF '25 AI Prompts for Business Domination'",
+      "button": "Start automation",
+      "note": "We'll start within 24 hours after payment"
+    },
+    "full": {
+      "name": "Full automation",
+      "desc": "3+ scenarios, profit growth and full automation",
+      "price": "550$",
+      "features": [
+        "Task analysis — we define routine and growth points",
+        "AI + n8n full automation (3+ integrations, custom Python nodes, AI endpoints)",
+        "Telegram bot or Webhook API creation",
+        "Performance Report",
+        "Documentation + training video",
+        "7 days of support after launch"
+      ],
+      "bonus": "Bonus: PDF '25 AI Prompts for Business Domination'",
+      "button": "Implement in 1 day",
+      "note": "We'll start within 24 hours after payment"
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "Here's what my clients say:",
+    "button": "I want the same result 🚀",
+    "list": [
+      {
+        "name": "Andrey, agency owner",
+        "text": "Nikita set up lead automation via Telegram and CRM in 2 days. Saved 15 hours a week.",
+        "company": "Com1 (2).png"
+      },
+      {
+        "name": "Maria, SaaS project",
+        "text": "After AI integration with email triage, we eliminated 80% of manual work.",
+        "company": "Com1 (1).png"
+      },
+      {
+        "name": "Vladimir, eCommerce",
+        "text": "AI + n8n implementation allowed us to automate order processing and increase revenue by 20%. Fast and clear!",
+        "company": "Com1 (3).png"
+      }
+    ]
+  },
+  "bonus": {
+    "title": "🎁 Bonus",
+    "desc": "PDF with ready-made AI prompts for sales, marketing, and automation",
+    "support": "7 days of free support",
+    "support_note": "(then $50/week: priority answers, bug fixes, 1 mini-update per week, consultations)"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "list": [
+      {
+        "q": "How long does setup take?",
+        "a": "Usually 2 to 5 days depending on task complexity."
+      },
+      {
+        "q": "What guarantees do I get?",
+        "a": "I guarantee full completion of the stated task or free revisions until the result."
+      },
+      {
+        "q": "How is payment made?",
+        "a": "100% prepayment via PayPal, Wise, or USDT. Work starts within 24 hours after payment."
+      },
+      {
+        "q": "Can you train my team?",
+        "a": "Yes, video instructions are included in the packages. I can also do a Zoom session."
+      }
+    ]
+  },
+  "contacts": {
+    "title": "Contact me",
+    "desc": "Write in a convenient messenger or by email, I reply quickly.",
+    "discord": "Discord",
+    "discord_user": "usual.developer",
+    "telegram": "Telegram",
+    "telegram_user": "@Olegh_0",
+    "whatsapp": "WhatsApp",
+    "whatsapp_user": "+385953705606",
+    "email": "Email",
+    "email_user": "Lazarievsmm@gmail.com"
+  },
+  "projects": {
+    "title": "Latest Projects",
+    "list": [
+      {
+        "problem": "E-commerce businesses spend a lot of time processing orders and communicating with clients. No chat memory, orders are recorded manually.",
+        "solutionVideo": "https://www.youtube.com/embed/B2wIj_Fawwg?autoplay=1&mute=1&controls=0&loop=1&playlist=B2wIj_Fawwg",
+        "solutionText": "Created an AI e-commerce agent:\n\n✅ Communicates with clients as an assistant (products, availability, support)\n✅ Remembers all conversations (memory)\n✅ Takes orders right in the chat\n✅ Automatically saves orders and logs in Supabase\n✅ Sends notifications to Telegram in real time\n\n🔧 Stack: n8n + GPT + Supabase + Telegram Bot",
+        "result": "Auto-processing of orders without a manager. Full chat history for analytics and improvements.",
+        "resultDesc": "Order time reduced from 5 minutes to 20 seconds."
+      },
+      {
+        "problem": "Realtors lose clients due to slow lead processing from the site. Data comes with errors, no validation, and no instant notifications.",
+        "solutionVideo": "https://www.youtube.com/embed/yIpIyUOA7IU?autoplay=1&mute=1&controls=0&loop=1&playlist=yIpIyUOA7IU",
+        "solutionText": "Built Real Estate Lead Automation:\n\n✅ Form validation (name, phone, email)\n✅ Data cleaning and normalization\n✅ Instant lead sent to Telegram with a 'Call' button\n✅ All implemented via n8n workflow + Telegram Bot API",
+        "result": "Leads arrive 1-2 seconds after form submission. Realtors call the client immediately without delay.",
+        "resultDesc": "Conversion increased without hiring new managers."
+      },
+      {
+        "problem": "Many businesses lose leads due to manual transfer from forms to CRM. Data is lost, no fast notifications.",
+        "solutionVideo": "https://www.youtube.com/embed/H8gNPQpl5nU?autoplay=1&mute=1&controls=0&loop=1&playlist=H8gNPQpl5nU",
+        "solutionText": "Built automation:\n\n✅ Lead from the form is captured instantly\n✅ AI validates and cleans data\n✅ Automatically creates a card in Trello CRM with details and follow-up tasks\n✅ Email notification sent instantly\n\n🔧 Stack: n8n workflow + Webhook + Trello API + Email automation",
+        "result": "Leads instantly appear in Trello with full info. Zero manual work, instant notifications.",
+        "resultDesc": "Business processes leads faster than competitors."
+      },
+      {
+        "problem": "Traders and crypto teams spend hours reading news and generating digests for Telegram.",
+        "solutionVideo": "https://www.youtube.com/embed/mX1zyFAeCOk?autoplay=1&mute=1&controls=0&loop=1&playlist=mX1zyFAeCOk",
+        "solutionText": "Built AI automation based on CryptoPanic News Analyzer: every hour it takes news from CryptoPanic, analyzes via GPT (sentiment, forecast, insights), generates an image and publishes a ready digest to Telegram via n8n.",
+        "result": "Fully automatic Crypto Digest every hour. Includes market sentiment, top news, forecast, risk metrics.",
+        "resultDesc": "Frees up the team for real trades, not copy-paste."
+      }
+    ],
+    "problemLabel": "Problem:",
+    "solutionLabel": "Solution:",
+    "resultLabel": "Result:"
+  },
+  "about": {
+    "main": "I'm Nikita. In the last 6 months, I've helped 10+ businesses reduce routine and increase profits with AI + n8n. My goal is to remove routine from your life.",
+    "highlight": "1200+ hours",
+    "highlightText": "saved for clients in a year.",
+    "desc": "I create not just scenarios, but systems that deliver results."
+  },
+  "orderModal": {
+    "steps": [
+      { "label": "Your name", "placeholder": "Enter your name", "type": "text", "key": "name" },
+      { "label": "E-mail", "placeholder": "Enter your e-mail", "type": "email", "key": "email" },
+      { "label": "Comment", "placeholder": "Comment (optional)", "type": "textarea", "key": "comment" },
+      { "label": "", "placeholder": "", "type": "payment", "key": "payment" }
+    ],
+    "close": "Close",
+    "pay": "Pay",
+    "next": "Next",
+    "thanks": "Thank you for your order!",
+    "paymentStub": "Payment (stub)",
+    "package": {
+      "fast": {
+        "desc": "$100 — 1 scenario, video instruction, 7 days support",
+        "note": "Time saved in 1 day."
+      },
+      "ai": {
+        "desc": "$250 — 1-2 integrations, AI prompts, docs, support",
+        "note": "Up to 10 hours saved per week."
+      },
+      "full": {
+        "desc": "$550 — 3+ integrations, Telegram bot, reports, support",
+        "note": "Profit growth and full automation."
+      }
+    }
+  }
+} 
