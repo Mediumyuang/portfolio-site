@@ -1,11 +1,13 @@
 'use client';
 import "@fontsource/inter";
 import "./globals.css";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu } from 'lucide-react';
 import { NextIntlClientProvider } from 'next-intl';
 import enMessages from '../messages/en.json';
 import ruMessages from '../messages/ru.json';
+
+const SUPPORTED_LANGS = ['en', 'ru'];
 
 export default function RootLayout({
   children,
@@ -13,16 +15,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [menuOpen, setMenuOpen] = useState(false);
-  // Определяем язык (из localStorage, иначе ru)
-  let lang = 'ru';
-  if (typeof window !== 'undefined') {
-    lang = localStorage.getItem('lang') || 'ru';
-  }
+  const [lang, setLang] = useState('en');
+
+  useEffect(() => {
+    // Проверяем cookie
+    let cookieLang = null;
+    if (typeof document !== 'undefined') {
+      const match = document.cookie.match(/(?:^|; )lang=([^;]*)/);
+      cookieLang = match ? decodeURIComponent(match[1]) : null;
+    }
+    if (cookieLang && SUPPORTED_LANGS.includes(cookieLang)) {
+      setLang(cookieLang);
+    } else {
+      // Определяем язык браузера
+      const browserLang = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+      const shortLang = browserLang.split('-')[0];
+      const detectedLang = SUPPORTED_LANGS.includes(shortLang) ? shortLang : 'en';
+      setLang(detectedLang);
+      // Сохраняем в cookie
+      document.cookie = `lang=${detectedLang}; path=/; max-age=31536000`;
+    }
+  }, []);
+
   const messages = lang === 'en' ? enMessages : ruMessages;
   return (
     <html lang={lang}>
       <body className="antialiased font-sans bg-[#0e0e1c] text-[#ededed]">
-        <NextIntlClientProvider locale={lang} messages={messages}>
+        <NextIntlClientProvider locale={lang} messages={messages} timeZone="UTC">
           <div className="fixed top-6 right-6 z-50">
             <button
               className="p-2 rounded-full bg-[#181830] hover:bg-[#23234a] shadow-lg border border-[#23234a] transition-colors"
@@ -45,24 +64,6 @@ export default function RootLayout({
                 <a href="#testimonials" className="text-lg font-bold text-white hover:text-[#a259f7] transition-colors" onClick={e => {e.preventDefault(); setMenuOpen(false); document.getElementById('testimonials')?.scrollIntoView({behavior:'smooth'});}}>Testimonials</a>
                 <a href="#bonus" className="text-lg font-bold text-white hover:text-[#a259f7] transition-colors" onClick={e => {e.preventDefault(); setMenuOpen(false); document.getElementById('bonus')?.scrollIntoView({behavior:'smooth'});}}>Bonus</a>
                 <a href="#contacts" className="text-lg font-bold text-white hover:text-[#a259f7] transition-colors" onClick={e => {e.preventDefault(); setMenuOpen(false); document.getElementById('contacts')?.scrollIntoView({behavior:'smooth'});}}>Contacts</a>
-                <div className="mt-8 flex flex-wrap gap-2 justify-center">
-                  {[
-                    { code: 'en', label: 'EN' },
-                    { code: 'ru', label: 'RU' }
-                  ].map(lang => (
-                    <button
-                      key={lang.code}
-                      className="rounded-full px-3 py-1 font-bold text-sm bg-[#23234a] text-white hover:bg-[#a259f7] transition-colors border border-[#4fc3f7]/30"
-                      onClick={() => {
-                        if (typeof window !== 'undefined') {
-                          localStorage.setItem('lang', lang.code);
-                          document.documentElement.lang = lang.code;
-                          window.location.reload();
-                        }
-                      }}
-                    >{lang.label}</button>
-                  ))}
-                </div>
               </div>
               <div className="flex-1" onClick={() => setMenuOpen(false)} />
             </div>
